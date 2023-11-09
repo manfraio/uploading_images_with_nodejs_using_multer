@@ -146,6 +146,7 @@ html, body {
     font-weight: 700;
     align-items: center;
     justify-content: center; 
+    text-transform: uppercase;
 }
 
 .progress-box p {

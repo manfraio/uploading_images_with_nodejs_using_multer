@@ -132,6 +132,6 @@ uploadButton.addEventListener('click', () => {
         }  
     })
 
-    request.open('POST', 'http://localhost:4000/upload');
+    request.open('POST', '/upload');
     request.send(data);
 });
