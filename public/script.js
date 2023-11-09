@@ -118,7 +118,7 @@ uploadButton.addEventListener('click', () => {
     request.upload.addEventListener('progress', (e) => {
         const percent = (e.loaded / e.total) * 100;
         progress.style.width = `${percent}%`;
-        progressPercentage.textContent = percent;
+        progressPercentage.textContent = Math.floor(percent);
     });
 
     request.addEventListener('load', (e) => {    
