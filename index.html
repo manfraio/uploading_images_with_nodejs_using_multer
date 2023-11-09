@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+    <title>Uploading Images with Node.js</title>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+
+            <div class="image-box">
+                <input class="image-input" type="file" name="image" accept="image/png, image/jpeg" />
+                
+                <div class="image">
+                    <a class="image-clear">clear</a>
+                </div>    
+
+                <p class="image-select">Drop your image here, or <a class="browse">browse</a></p>
+                <p class="image-support">Supports only .png, .jpg, .jpeg</p>
+            </div>
+
+            <button class="upload-button">
+                <img src="images/upload.png"/>
+                Upload image 
+            </button>        
+            
+            <div class="progress-box">
+                <div class="progress"></div>
+                <p>Uploading... (<span class="progress-percentage">0</span>%)</p>
+            </div>   
+
+            <div class="alert-box">
+                <img class="alert-image" src="images/success.png"/>
+                <p class="alert-message"></p>   
+                
+                <button type="button" class="alert-close">
+                    <span>&times;</span>
+                </button>
+            </div>              
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
