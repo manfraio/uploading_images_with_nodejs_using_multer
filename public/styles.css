@@ -175,14 +175,32 @@ html, body {
     height: 50px;
     margin-top: 16px;
     opacity: 100%;
-    background-color: #ffffff;
-    border: 2px solid #ebf3fb;
+    border-width: 2px;
+    border-style: solid;
     border-radius: 10px;
-    color: #9fb9d7;
+    color: #ffffff;
     font-weight: 700;
     font-size: 12px;
     align-items: center;
     text-transform: uppercase;
+}
+
+.alert-box.success {
+    background-color: #b9d79f;
+    border-color: #a6c18f;
+}
+
+.alert-box.success .alert-image {
+    content: url(images/success.png) !important;
+}
+
+.alert-box.error {
+    background-color: #d79fb9;
+    border-color: #c18fa6;
+}
+
+.alert-box.error .alert-image {
+    content: url(images/error.png) !important;
 }
 
 .alert-image {
@@ -191,16 +209,17 @@ html, body {
 }
 
 .alert-close {
+    color: #ffffff;
     background-color: transparent;
     border: 0;
     margin-left: auto;
     margin-right: 10px;
     cursor: pointer;
     font-size: 20px;
-    opacity: .2;
+    opacity: .5;
 }
 
 .alert-close:hover {
-    opacity: .7;
+    opacity: 1;
 }
 
