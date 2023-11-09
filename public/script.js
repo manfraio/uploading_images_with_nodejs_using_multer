@@ -124,6 +124,6 @@ uploadButton.addEventListener('click', () => {
             request.response ? request.response.message : `Error: ${request.status} - ${request.statusText}`);
     })
 
-    request.open('POST', '/1upload');
+    request.open('POST', '/upload');
     request.send(data);
 });
