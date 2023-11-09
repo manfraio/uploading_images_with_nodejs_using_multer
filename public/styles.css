@@ -49,7 +49,7 @@ html, body {
 }
 
 .image-clear {
-    display: block;
+    display: none;
     color: #ffffff;
     background-color: #eb9486;
     border-radius: 10px;
@@ -133,7 +133,7 @@ html, body {
 
 /* PROGRESS BOX */
 .progress-box {
-    display: flex;
+    display: none;
     position: relative;
     width: 100%;
     height: 50px;
@@ -170,7 +170,7 @@ html, body {
 
 /* ALERT BOX */
 .alert-box {
-    display: flex;
+    display: none;
     width: 100%;
     height: 50px;
     margin-top: 16px;

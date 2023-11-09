@@ -13,14 +13,6 @@ const alertMesssage = document.querySelector('.alert-message');
 const alertImage = document.querySelector('.alert-image');
 const alertClose = document.querySelector('.alert-close');
 
-// On Page Load event
-window.onload = function() {
-    uploadButton.disabled = true;
-    imageClear.style.display = 'none';
-    progressBox.style.display = 'none';
-    alertBox.style.display = 'none'; 
-};
-
 // Functions
 function showAlert(success, message) {
     alertBox.style.display = 'flex';
@@ -125,13 +117,13 @@ uploadButton.addEventListener('click', () => {
         clearImage();
         clearProgress();
 
-        if (request.status === 500) {
-            showAlert(false, 'Something went wrong...')
-        } else {
-            showAlert(request.response.success, request.response.message);
-        }  
+        console.log(request)
+
+        showAlert(
+            request.response ? request.response.success : false, 
+            request.response ? request.response.message : `Error: ${request.status} - ${request.statusText}`);
     })
 
-    request.open('POST', '/upload');
+    request.open('POST', '/1upload');
     request.send(data);
 });
