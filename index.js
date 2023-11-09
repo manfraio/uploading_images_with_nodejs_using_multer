@@ -18,6 +18,9 @@ const port = 4000;
 // Serves static files (we need it to import .css, .js and image files)
 app.use(express.static('public'));
 
+// Serves upload images
+app.use(express.static('uploads'));
+
 //Sets a basic route
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
@@ -35,7 +38,9 @@ const storage = multer.diskStorage({
         cb(null, dir)
     },
     filename: function (req, file, cb) {
-        cb(null, Date.now() + path.extname(file.originalname))
+        cb(null, file.originalname)
+
+        //cb(null, Date.now() + path.extname(file.originalname))
     }
 })
 
